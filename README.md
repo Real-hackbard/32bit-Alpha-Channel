@@ -149,9 +149,9 @@ The file format BMP generally does not support this channel; however, in differe
 | HEVC / h.265 | 10-bit | None | Limited To Safari | Video (.hevc) | Intended successor to H.264 |
 | WebM (codec video VP8, VP9, or AV1) | 12-Bit | None | All modern browsers | Video (.webm) | While VP8/VP9 is widely supported with modern browsers, AV1 still has limited support. Only Chromium-based browsers will display alpha layers. |
 | OpenEXR | 32-bit | None | None |Image (.exr) | Has largest HDR spread. | 
-| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
-| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
-| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
+| PNG | 16-bit | straight | All modern browsers | Image (.png) | None |
+| APNG | 24-bit | straight | Moderate support | Image (.apng) | Supports animation. |
+| TIFF | 32-bit | both | None | Image (.tiff) | None |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
