@@ -145,12 +145,12 @@ The file format BMP generally does not support this channel; however, in differe
 
 | File Codec Format | Maximum Depth | Type | Browser Support | Media Types | Notes |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
-| Apple ProRes 4444 | 16-bit | None | None | Video (.mov) | ProRes is the successor of the Apple Intermediate Codec |
-| HEVC / h.265 | 10-bit | None | Limited To Safari | Video (.hevc) | Intended successor to H.264 |
-| WebM (codec video VP8, VP9, or AV1) | 12-Bit | None | All modern browsers | Video (.webm) | While VP8/VP9 is widely supported with modern browsers, AV1 still has limited support. Only Chromium-based browsers will display alpha layers. |
-| OpenEXR | 32-bit | None | None |Image (.exr) | Has largest HDR spread. | 
-| PNG | 16-bit | straight | All modern browsers | Image (.png) | None |
-| APNG | 24-bit | straight | Moderate support | Image (.apng) | Supports animation. |
+| [Apple ProRes 4444](https://en.wikipedia.org/wiki/Apple_ProRes) | 16-bit | None | None | Video (.mov) | ProRes is the successor of the Apple Intermediate Codec |
+| [HEVC / h.265](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding) | 10-bit | None | Limited To Safari | Video (.hevc) | Intended successor to H.264 |
+| [WebM](https://en.wikipedia.org/wiki/WebM) (codec video VP8, VP9, or AV1) | 12-Bit | None | All modern browsers | Video (.webm) | While VP8/VP9 is widely supported with modern browsers, AV1 still has limited support. Only Chromium-based browsers will display alpha layers. |
+| [OpenEXR](https://en.wikipedia.org/wiki/OpenEXR) | 32-bit | None | None |Image (.exr) | Has largest HDR spread. | 
+| [PNG](https://en.wikipedia.org/wiki/PNG) | 16-bit | straight | All modern browsers | Image (.png) | None |
+| [APNG](https://en.wikipedia.org/wiki/APNG) | 24-bit | straight | Moderate support | Image (.apng) | Supports animation. |
 | TIFF | 32-bit | both | None | Image (.tiff) | None |
 | GIF | 8.bit | None | All modern browsers | Image (.gif) | Browsers generally do not support GIF alpha layers. |
 | SVG | 32-bit | straight	 | All modern browsers | Image (.svg) | Based on CSS color. |
