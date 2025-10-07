@@ -47,8 +47,8 @@ Referring to the diagram 1, the bitmap file is composed of structures in the fol
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
 | [Bitmap file header](https://learn.microsoft.com/en-us/windows/win32/api/wingdi/ns-wingdi-bitmapfileheader)     | No     | 14          | General information | Not needed after the file is loaded in memory|
 | [DIB header](https://d3s.mff.cuni.cz/legacy/teaching/principles_of_computers//Zkouska%20Principy%20pocitacu%202017-18%20-%20varianta%2002%20-%20priloha%20-%20format%20BMP%20z%20Wiki.pdf) | No | Fixed-size (7 different versions exist) | Detailed information and pixel format | Immediately follows the Bitmap file header |
-| Extra bit masks | Yes | 12 or 16 | Pixel format | Present only in case the DIB header is the BITMAPINFOHEADER and the Compression Method member is set to either BI_BITFIELDS or BI_ALPHABITFIELDS |
-| Color table | Depends | Varies | Colors (Pixel array) | Mandatory for color depths ≤ 8 bits |
+| [Extra bit masks](https://docs.oracle.com/en/database/oracle/oracle-database/23/geors/bitmap-masks.html) | Yes | 12 or 16 | Pixel format | Present only in case the DIB header is the BITMAPINFOHEADER and the Compression Method member is set to either BI_BITFIELDS or BI_ALPHABITFIELDS |
+| [Color table](https://learn.microsoft.com/en-us/windows/win32/gdiplus/-gdiplus-types-of-bitmaps-about) | Depends | Varies | Colors (Pixel array) | Mandatory for color depths ≤ 8 bits |
 | Gap1 | Yes | Varies | Structure alignment | An artifact of the File offset to Pixel array in the Bitmap file header |
 | Pixel array | No | Varies | Pixel values | The pixel format is defined by the DIB header or Extra bit masks. Each row in the Pixel array is padded to a multiple of 4 bytes in size |
 | Gap2 | Yes | Varies	 | Structure alignment | An artifact of the ICC profile data offset field in the DIB header |
