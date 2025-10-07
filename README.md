@@ -137,3 +137,10 @@ With the existence of an alpha channel, it is possible to express compositing im
 <img width="642" height="308" alt="Alpha_compositing" src="https://github.com/user-attachments/assets/fe3611e4-4507-48cb-9a8d-4897e14e4d8f" />
 
 </br>
+
+### Image formats supporting alpha channels:
+The most popular image formats that support the alpha channel are [PNG](https://en.wikipedia.org/wiki/PNG) and [TIFF](https://en.wikipedia.org/wiki/Tagged_Image_File_Format). [GIF](https://en.wikipedia.org/wiki/Graphics_Interchange_Format) supports alpha channels, but is considered to be inefficient when it comes to file size. Support for alpha channels is present in some video codecs, such as Animation and Apple ProRes 4444 of the QuickTime format, or in the Techsmith multi-format codec.
+
+The file format BMP generally does not support this channel; however, in different formats such as 32-bit (888–8) or 16-bit (444–4) it is possible to save the alpha channel, although not all systems or programs are able to read it: it is exploited mainly in some video games or particular applications; specific programs have also been created for the creation of these BMPs.
+
+
