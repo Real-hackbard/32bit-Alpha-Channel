@@ -45,7 +45,7 @@ Referring to the diagram 1, the bitmap file is composed of structures in the fol
 
 | Structure     | Optional      | Size (bytes)  | Purpose       | Comment       |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
-| Bitmap file header     | No     | 14          | General information | Not needed after the file is loaded in memory|
+| [Bitmap file header](https://learn.microsoft.com/en-us/windows/win32/api/wingdi/ns-wingdi-bitmapfileheader)     | No     | 14          | General information | Not needed after the file is loaded in memory|
 | DIB header | No | Fixed-size (7 different versions exist) | Detailed information and pixel format | Immediately follows the Bitmap file header |
 | Extra bit masks | Yes | 12 or 16 | Pixel format | Present only in case the DIB header is the BITMAPINFOHEADER and the Compression Method member is set to either BI_BITFIELDS or BI_ALPHABITFIELDS |
 | Color table | Depends | Varies | Colors (Pixel array) | Mandatory for color depths ≤ 8 bits |
