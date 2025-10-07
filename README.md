@@ -52,7 +52,7 @@ Referring to the diagram 1, the bitmap file is composed of structures in the fol
 | Gap1 | Yes | Varies | Structure alignment | An artifact of the File offset to Pixel array in the Bitmap file header |
 | [Pixel array](https://en.wikipedia.org/wiki/Color_filter_array) | No | Varies | Pixel values | The pixel format is defined by the DIB header or Extra bit masks. Each row in the Pixel array is padded to a multiple of 4 bytes in size |
 | Gap2 | Yes | Varies	 | Structure alignment | An artifact of the ICC profile data offset field in the DIB header |
-| ICC color profile | Yes | Varies | Color profile (for color management) | Can also contain a path to an external file containing the color profile. When loaded in memory as "non-packed DIB", it is located between the color table and Gap1. |
+| [ICC color profile](https://en.wikipedia.org/wiki/ICC_profile) | Yes | Varies | Color profile (for color management) | Can also contain a path to an external file containing the color profile. When loaded in memory as "non-packed DIB", it is located between the color table and Gap1. |
 
 
 
