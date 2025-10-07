@@ -54,12 +54,72 @@ Referring to the diagram 1, the bitmap file is composed of structures in the fol
 | Gap2 | Yes | Varies	 | Structure alignment | An artifact of the ICC profile data offset field in the DIB header |
 | [ICC color profile](https://en.wikipedia.org/wiki/ICC_profile) | Yes | Varies | Color profile (for color management) | Can also contain a path to an external file containing the color profile. When loaded in memory as "non-packed DIB", it is located between the color table and Gap1. |
 
+</br>
 
+### Bitmap32:
+TBitmap32 is the central class in the Graphics32 library. It manages a single 32-bit device-independent bitmap (DIB) and provides methods for drawing on it and combining it with other DIBs or other objects with device context (DC).
 
+TBitmap32 overrides Assign and AssignTo methods (inherited from TPersistent) to provide compatibility with standard objects: TBitmap, TPicture and TClipboard in both directions. The design-time streaming to and from *.dfm files, inherited from TPersistent, is supported, but its realization is different from streaming with other stream types (See the source code for details).
 
+TBitmap32 does not implement its own low-level streaming or low-level file loading/saving. Instead, it uses streaming methods of temporal TBitmap or TPicture objects. This is an obvious performance penalty, however such approach allows using third-party libraries, which extend TGraphic class for various image formats support (JPEG, TGA, TIFF, GIF, PNG, etc.). When you install them, TBitmap32 will automatically obtain support for new image file formats in design time and in run time.
 
+Since TBitmap32 is a descendant of TThreadPersistent, it inherits its locking mechanism and it may be used in multi-threaded applications.
 
+```pascal
+// Convert all Picture Pixel
+function Bmp24To32(const aBitmap: TBitmap): Boolean;
+var PData       : PRGBQuad;
+  I, BytesTotal : Integer;
+  TrsColor: Integer;
+begin
+  Result := False;
+  if not Assigned(aBitmap) then
+    Exit;
+  aBitmap.PixelFormat := pf32Bit;
+  BytesTotal := aBitmap.Width * aBitmap.Height;
+  TrsColor := aBitmap.Canvas.Pixels[0, 0];
+  try
+    Result := True;
+    PData := aBitmap.ScanLine[aBitmap.Height-1];
+    for I := 0 to BytesTotal - 1 do
+    begin
+      if Integer(PData^) <> TrsColor then
+        PData^.rgbReserved := 255;
+      Inc(PData);
+    end;
+  except
+    Result := False;
+  end;
+end;
+```
 
+</br>
+
+```pascal
+// Concert RGB Pixel Colors 
+function Bmp24To32(const aBitmap: TBitmap; const TrsColor: TColor): Boolean;
+var PData       : PRGBQuad;
+  I, BytesTotal : Integer;
+begin
+  Result := False;
+  if not Assigned(aBitmap) then
+    Exit;
+  aBitmap.PixelFormat := pf32Bit;
+  BytesTotal := aBitmap.Width * aBitmap.Height;
+  try
+    Result := True;
+    PData := aBitmap.ScanLine[aBitmap.Height-1];
+    for I := 0 to BytesTotal - 1 do
+    begin
+      if Integer(PData^) <> TrsColor then
+        PData^.rgbReserved := 255;
+      Inc(PData);
+    end;
+  except
+    Result := False;
+  end;
+end;
+```
 
 
 
