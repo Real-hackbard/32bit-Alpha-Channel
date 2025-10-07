@@ -38,5 +38,30 @@ In computer graphics, alpha compositing or alpha blending is the process of comb
 
 </br>
 
+### File structure:
+The bitmap image file consists of fixed-size structures (headers) as well as variable-sized structures appearing in a predetermined sequence. Many different versions of some of these structures can appear in the file, due to the long evolution of this file format.
+
+Referring to the diagram 1, the bitmap file is composed of structures in the following order:
+
+| Structure     | Optional      | Size (bytes)  | Purpose       | Comment       |
+| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
+| Bitmap file header     | No     | 14          | General information | Not needed after the file is loaded in memory|
+| DIB header | No | Fixed-size (7 different versions exist) | Detailed information and pixel format | Immediately follows the Bitmap file header |
+| Extra bit masks | Yes | 12 or 16 | Pixel format | Present only in case the DIB header is the BITMAPINFOHEADER and the Compression Method member is set to either BI_BITFIELDS or BI_ALPHABITFIELDS |
+| Color table | Depends | Varies | Colors (Pixel array) | Mandatory for color depths ≤ 8 bits |
+| Gap1 | Yes | Varies | Structure alignment | An artifact of the File offset to Pixel array in the Bitmap file header |
+| Pixel array | No | Varies | Pixel values | The pixel format is defined by the DIB header or Extra bit masks. Each row in the Pixel array is padded to a multiple of 4 bytes in size |
+| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
+| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
+
+
+
+
+
+
+
+
+
+
 
 
