@@ -4,7 +4,7 @@
 
 ```ruby
 Compiler    : Delphi10 Seattle, 10.1 Berlin, 10.2 Tokyo, 10.3 Rio, 10.4 Sydney, 11 Alexandria, 12 Athens
-Components  : PNGImage.pas, GIFImg.pas, crBitmap32.pas, BmpGrD12.pas
+Components  : PNGImage.pas, GIFImg.pas, crBitmap32.pas, BmpGrD12.pas, Bmp2tiff.pas
 Discription : Create 32bit Bitmaps with Alpha-Channels
 Last Update : 10/2025
 License     : Freeware
@@ -30,7 +30,7 @@ TBitmap32 : https://documentation.help/Graphics32/_Body4.htm
 ### Features
 * Adjust Alpha Channels
 * Selct Pixel Format
-* Export Format : *.BMP, *.JPG/JPEG, *.PNG, *.GIF
+* Export Format : *.BMP, *.JPG/JPEG, *.PNG, *.GIF, *.TIFF ```pascal(This can cause compatibility problems, then use a different compiler)```
 * Compress
 * Tranzparent
 * Infrared
