@@ -67,6 +67,8 @@ TBitmap32 does not implement its own low-level streaming or low-level file loadi
 
 Since TBitmap32 is a descendant of TThreadPersistent, it inherits its locking mechanism and it may be used in multi-threaded applications.
 
+TBitmap32 : https://documentation.help/Graphics32/_Body4.htm
+
 ```pascal
 // Convert all Picture Pixel
 function Bmp24To32(const aBitmap: TBitmap): Boolean;
