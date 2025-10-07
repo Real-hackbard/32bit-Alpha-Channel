@@ -151,10 +151,10 @@ The file format BMP generally does not support this channel; however, in differe
 | [OpenEXR](https://en.wikipedia.org/wiki/OpenEXR) | 32-bit | None | None |Image (.exr) | Has largest HDR spread. | 
 | [PNG](https://en.wikipedia.org/wiki/PNG) | 16-bit | straight | All modern browsers | Image (.png) | None |
 | [APNG](https://en.wikipedia.org/wiki/APNG) | 24-bit | straight | Moderate support | Image (.apng) | Supports animation. |
-| TIFF | 32-bit | both | None | Image (.tiff) | None |
-| GIF | 8.bit | None | All modern browsers | Image (.gif) | Browsers generally do not support GIF alpha layers. |
-| SVG | 32-bit | straight	 | All modern browsers | Image (.svg) | Based on CSS color. |
-| JPEG | 32-bit | both | Moderate support | Image (.jxl) | Allows lossy and HDR. |
+| [TIFF](https://en.wikipedia.org/wiki/TIFF) | 32-bit | both | None | Image (.tiff) | None |
+| [GIF](https://en.wikipedia.org/wiki/GIF) | 8.bit | None | All modern browsers | Image (.gif) | Browsers generally do not support GIF alpha layers. |
+| [SVG](https://en.wikipedia.org/wiki/SVG) | 32-bit | straight	 | All modern browsers | Image (.svg) | Based on CSS color. |
+| [JPEG](https://en.wikipedia.org/wiki/JPEG_XL) | 32-bit | both | Moderate support | Image (.jxl) | Allows lossy and HDR. |
 
 
 
