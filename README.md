@@ -145,10 +145,16 @@ The file format BMP generally does not support this channel; however, in differe
 
 | File Codec Format | Maximum Depth | Type | Browser Support | Media Types | Notes |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
-| Apple ProRes 4444 | 16 bit | None | None | Video (.mov) | ProRes is the successor of the Apple Intermediate Codec |
+| Apple ProRes 4444 | 16-bit | None | None | Video (.mov) | ProRes is the successor of the Apple Intermediate Codec |
 | HEVC / h.265 | 10-bit | None | Limited To Safari | Video (.hevc) | Intended successor to H.264 |
-| HEVC / h.265 | 10-bit | None | Limited To Safari | Video (.hevc) | Intended successor to H.264 |
-| WebM (codec video VP8, VP9, or AV1) | 12 Bit | None | All modern browsers | Video (.webm) | While VP8/VP9 is widely supported with modern browsers, AV1 still has limited support.[16] Only Chromium-based browsers will display alpha layers. |
+| WebM (codec video VP8, VP9, or AV1) | 12-Bit | None | All modern browsers | Video (.webm) | While VP8/VP9 is widely supported with modern browsers, AV1 still has limited support. Only Chromium-based browsers will display alpha layers. |
+| OpenEXR | 32-bit | None | None |Image (.exr) | Has largest HDR spread. | 
+| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
+| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
+| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
+| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
+| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
+| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
 
 
 
