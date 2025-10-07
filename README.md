@@ -146,7 +146,7 @@ The file format BMP generally does not support this channel; however, in differe
 | File Codec Format | Maximum Depth | Type | Browser Support | Media Types | Notes |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
 | Apple ProRes 4444 | 16 bit | None | None | Video (.mov) | ProRes is the successor of the Apple Intermediate Codec |
-| HEVC / h.265	| 10-bit		| Limited to Safari	| Video (.hevc)	| Intended successor to H.264
+| HEVC / h.265	| 10-bit		| None | Limited to Safari	| Video (.hevc)	| Intended successor to H.264
 
 
 
