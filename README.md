@@ -13,3 +13,6 @@ License     : Freeware
 </br>
 
 
+The BMP file format, or bitmap, is a [raster graphics](https://en.wikipedia.org/wiki/Raster_graphics) image file format used to store bitmap [digital images](https://en.wikipedia.org/wiki/Digital_image), independently of the display device (such as a graphics adapter), especially on Microsoft Windows and OS/2 operating systems.
+
+The BMP file format is capable of storing [two-dimensional](https://en.wikipedia.org/wiki/2D_computer_graphics) digital images in various color depths, and optionally with data compression, alpha channels, and [color profiles](https://en.wikipedia.org/wiki/Color_management). The [Windows Metafile](https://en.wikipedia.org/wiki/Windows_Metafile) (WMF) specification covers the BMP file format.
