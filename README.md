@@ -156,6 +156,7 @@ The file format BMP generally does not support this channel; however, in differe
 | [SVG](https://en.wikipedia.org/wiki/SVG) | 32-bit | straight	 | All modern browsers | Image (.svg) | Based on CSS color. |
 | [JPEG](https://en.wikipedia.org/wiki/JPEG_XL) | 32-bit | both | Moderate support | Image (.jxl) | Allows lossy and HDR. |
 
+</br>
 
 
 
