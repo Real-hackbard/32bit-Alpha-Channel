@@ -143,4 +143,10 @@ The most popular image formats that support the alpha channel are [PNG](https://
 
 The file format BMP generally does not support this channel; however, in different formats such as 32-bit (888–8) or 16-bit (444–4) it is possible to save the alpha channel, although not all systems or programs are able to read it: it is exploited mainly in some video games or particular applications; specific programs have also been created for the creation of these BMPs.
 
+| File Codec Format | Maximum Depth | Type | Browser Support | Media Types | Notes |
+| Apple ProRes 4444 | 16 bit | None | None | Video (.mov) | ProRes is the successor of the Apple Intermediate Codec |
+
+
+
+
 
