@@ -124,8 +124,16 @@ begin
   end;
 end;
 ```
+</br>
 
 
+### Alpha Compositing:
+In a 2D image a color combination is stored for each picture element (pixel), often a combination of red, green and blue ([RGB](https://en.wikipedia.org/wiki/RGB_color_model)). When alpha compositing is in use, each pixel has an additional numeric value stored in its alpha channel, with a value ranging from 0 to 1. A value of 0 means that the pixel is fully transparent and the color in the pixel beneath will show through. A value of 1 means that the pixel is fully opaque.
 
+With the existence of an alpha channel, it is possible to express compositing image operations using a compositing algebra. For example, given two images A and B, the most common compositing operation is to combine the images so that A appears in the foreground and B appears in the background. This can be expressed as A over B. In addition to over, Porter and Duff defined the compositing operators in, held out by (the phrase refers to [holdout matting](https://en.wikipedia.org/wiki/Matte_(filmmaking)#Garbage_and_holdout_mattes) and is usually abbreviated out), atop, and xor (and the reverse operators rover, rin, rout, and ratop) from a consideration of choices in blending the colors of two pixels when their coverage is, conceptually, overlaid orthogonally:
 
+</br>
 
+<img width="642" height="308" alt="Alpha_compositing" src="https://github.com/user-attachments/assets/fe3611e4-4507-48cb-9a8d-4897e14e4d8f" />
+
+</br>
