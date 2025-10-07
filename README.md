@@ -30,7 +30,7 @@ TBitmap32 : https://documentation.help/Graphics32/_Body4.htm
 ### Features
 * Adjust Alpha Channels
 * Selct Pixel Format
-* Export Format : *.BMP, *.JPG/JPEG, *.PNG, *.GIF, *.TIFF ```pascal(This can cause compatibility problems, then use a different compiler)```
+* Export Format : *.BMP, *.JPG/JPEG, *.PNG, *.GIF, *.TIFF   ```(This can cause compatibility problems, then use a different compiler)```
 * Compress
 * Tranzparent
 * Infrared
