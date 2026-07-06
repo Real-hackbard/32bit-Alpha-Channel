@@ -124,6 +124,7 @@ begin
 end;
 ```
 
+</br>
 
 ### File structure:
 The bitmap image file consists of fixed-size structures (headers) as well as variable-sized structures appearing in a predetermined sequence. Many different versions of some of these structures can appear in the file, due to the long evolution of this file format.
