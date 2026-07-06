@@ -135,7 +135,7 @@ end;
 
 </br>
 
-### File structure:
+# File structure:
 The bitmap image file consists of fixed-size structures (headers) as well as variable-sized structures appearing in a predetermined sequence. Many different versions of some of these structures can appear in the file, due to the long evolution of this file format.
 
 Referring to the diagram 1, the bitmap file is composed of structures in the following order:
@@ -153,7 +153,7 @@ Referring to the diagram 1, the bitmap file is composed of structures in the fol
 
 </br>
 
-### Bitmap32:
+# Bitmap32:
 TBitmap32 is the central class in the Graphics32 library. It manages a single 32-bit device-independent bitmap (DIB) and provides methods for drawing on it and combining it with other DIBs or other objects with device context (DC).
 
 TBitmap32 overrides Assign and AssignTo methods (inherited from TPersistent) to provide compatibility with standard objects: TBitmap, TPicture and TClipboard in both directions. The design-time streaming to and from *.dfm files, inherited from TPersistent, is supported, but its realization is different from streaming with other stream types (See the source code for details).
@@ -222,7 +222,7 @@ end;
 </br>
 
 
-### Alpha Compositing:
+# Alpha Compositing:
 In a 2D image a color combination is stored for each picture element (pixel), often a combination of red, green and blue ([RGB](https://en.wikipedia.org/wiki/RGB_color_model)). When alpha compositing is in use, each pixel has an additional numeric value stored in its alpha channel, with a value ranging from 0 to 1. A value of 0 means that the pixel is fully transparent and the color in the pixel beneath will show through. A value of 1 means that the pixel is fully opaque.
 
 With the existence of an alpha channel, it is possible to express compositing image operations using a compositing algebra. For example, given two images A and B, the most common compositing operation is to combine the images so that A appears in the foreground and B appears in the background. This can be expressed as A over B. In addition to over, Porter and Duff defined the compositing operators in, held out by (the phrase refers to [holdout matting](https://en.wikipedia.org/wiki/Matte_(filmmaking)#Garbage_and_holdout_mattes) and is usually abbreviated out), atop, and xor (and the reverse operators rover, rin, rout, and ratop) from a consideration of choices in blending the colors of two pixels when their coverage is, conceptually, overlaid orthogonally:
@@ -233,7 +233,7 @@ With the existence of an alpha channel, it is possible to express compositing im
 
 </br>
 
-### Image formats supporting alpha channels:
+# Image formats supporting alpha channels:
 The most popular image formats that support the alpha channel are [PNG](https://en.wikipedia.org/wiki/PNG) and [TIFF](https://en.wikipedia.org/wiki/Tagged_Image_File_Format). [GIF](https://en.wikipedia.org/wiki/Graphics_Interchange_Format) supports alpha channels, but is considered to be inefficient when it comes to file size. Support for alpha channels is present in some video codecs, such as Animation and Apple ProRes 4444 of the QuickTime format, or in the Techsmith multi-format codec.
 
 The file format BMP generally does not support this channel; however, in different formats such as 32-bit (888–8) or 16-bit (444–4) it is possible to save the alpha channel, although not all systems or programs are able to read it: it is exploited mainly in some video games or particular applications; specific programs have also been created for the creation of these BMPs.
