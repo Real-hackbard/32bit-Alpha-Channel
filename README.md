@@ -35,6 +35,7 @@ TBitmap32 : https://documentation.help/Graphics32/_Body4.htm
 * Tranzparent
 * Infrared
 * Negativ
+* Generate Multi Mask Pictures
 
 </br>
 
