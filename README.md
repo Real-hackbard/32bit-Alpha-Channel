@@ -82,8 +82,10 @@ begin
   begin
     // Initialize the random number generator once.
     Randomize;
+
     // Determine a random index between 0 and the number of paths minus 1.
     Index := Random(Length(path));
+
     // Creating the TImage component at runtime
     DynamicImage := TImage.Create(Self);
     try
@@ -98,6 +100,7 @@ begin
       { VCL method primarily used to dynamically scale forms and UI controls
         for different monitor resolutions, known as Pixels Per Inch (PPI). }
       DynamicImage.ScaleForPPI(0);
+
       // format picture
       DynamicImage.Stretch := True;
       DynamicImage.Proportional := True;
@@ -105,6 +108,7 @@ begin
 
       // Load the randomly selected image
       DynamicImage.Picture.LoadFromFile(path[Index]);
+
       // check the background image is bitmap or out.
       if ExtractFileExt(OpenPictureDialog1.FileName) <> '.bmp' then
       begin
@@ -114,9 +118,11 @@ begin
         DynamicImage.Free;  // remove pixel
         Exit;               // go out when not
       end;
+
       // Paint the mask onto the background at random.
       Image1.Canvas.Draw(Random(Image1.Width), Random(Image1.Height),
                           DynamicImage.Picture.Graphic);
+
       // remove pixel from memory
       DynamicImage.Picture.Graphic := nil;
     except
