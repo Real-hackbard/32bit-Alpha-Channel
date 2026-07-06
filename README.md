@@ -59,7 +59,7 @@ Once the masks have been painted, the background is not painted over; instead, t
 
 </br>
 
-### Code Sample
+### Mask Generator Code Sample
 ```pascal
 { Here, a specific number of dynamic images are randomly generated as
   masks over the background. }
