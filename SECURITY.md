@@ -8,6 +8,7 @@ currently being supported with security updates.
 | Version | Supported          |
 | ------- | ------------------ |
 | 1.0.x   | :white_check_mark: |
+| 1.1.x   | :white_check_mark: Add disable Mask; Multi Mask Generator; Scaling Mask Image |
 
 ## Reporting a Vulnerability
 
