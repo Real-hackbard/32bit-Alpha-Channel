@@ -36,7 +36,9 @@ TBitmap32 : https://documentation.help/Graphics32/_Body4.htm
 * Infrared
 * Negativ
 
-![32 Bit Alpha](https://github.com/user-attachments/assets/e33ebdae-8476-4bbf-bd8d-ebf7131a449c)
+</br>
+
+<img src="https://github.com/user-attachments/assets/b5049c5c-7e03-4fbb-b8eb-1f068904286a" />
 
 </br>
 
