@@ -36,6 +36,7 @@ TBitmap32 : https://documentation.help/Graphics32/_Body4.htm
 * Infrared
 * Negativ
 * Generate Multi Mask Pictures
+* Scale Mask Picture Prozentual
 
 </br>
 
