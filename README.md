@@ -43,6 +43,19 @@ TBitmap32 : https://documentation.help/Graphics32/_Body4.htm
 
 </br>
 
+# Multi Mask Generator
+Any number of images can be generated over the background using masks. The quantity is adjustable, and the painting process occurs randomly across the background. By modifying the code, X/Y coordinates can also be specified directly.
+
+Once the masks have been painted, the background is not painted over; instead, the masks can be removed again at the touch of a button.
+
+</br>
+
+<img src="https://github.com/user-attachments/assets/204909a4-ef2a-495c-a408-f0cc5e47cca1" />
+
+</br>
+
+
+
 ### File structure:
 The bitmap image file consists of fixed-size structures (headers) as well as variable-sized structures appearing in a predetermined sequence. Many different versions of some of these structures can appear in the file, due to the long evolution of this file format.
 
