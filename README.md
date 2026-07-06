@@ -138,6 +138,68 @@ end;
 # Image scaling
 When scaling a image, the graphic primitives that make up the image can be rendered using geometric transformations at any resolution with no loss of [image quality](https://en.wikipedia.org/wiki/Image_quality). When scaling a [raster graphics image](https://en.wikipedia.org/wiki/Raster_graphics), a new image with a higher or lower number of pixels must be generated.
 
+### Scale Image Code sample:
+```pascal
+procedure StretchMask(const src, dest: TGraphic;
+  DestWidth, DestHeight: integer; Smooth: Boolean = true);
+var
+  temp, aCopy: TBitmap;
+  faktor: double;
+begin
+  // check whether the dimensions match
+  Assert(Assigned(src) and Assigned(dest));
+  if (src.Width = 0) or (src.Height = 0) then
+    raise Exception.CreateFmt('Invalid source dimensions: %d x %d',[src.Width, src.Height]);
+
+  // Calculate if the width matches.
+  if src.Width > DestWidth then
+    begin
+      faktor := DestWidth / src.Width;
+      if (src.Height * faktor) > DestHeight then
+        faktor := DestHeight / src.Height;
+    end
+  else
+    begin
+      // equalize the amount as a percentage.
+      faktor := DestHeight / src.Height;
+      if (src.Width * faktor) > DestWidth then
+        faktor := DestWidth / src.Width;
+    end;
+  try
+    // create bitmap
+    aCopy := TBitmap.Create;
+    try
+      //bitmap pixel format
+      aCopy.PixelFormat := pf24Bit;
+      // copy source pixel
+      aCopy.Assign(src);
+      temp := TBitmap.Create;
+      try
+        // Copy the x/y factors as a percentage and round them down.
+        temp.Width := round(src.Width * faktor);
+        temp.Height := round(src.Height * faktor);
+
+        { Bitmap smooth scaling refers to resizing a raster image while
+          applying resampling algorithms to blend pixel colors, which
+          prevents jagged edges ("aliasing") and blocky artifacts. }
+        if Smooth then
+          SetStretchBltMode(temp.Canvas.Handle, HALFTONE);
+        StretchBlt(temp.Canvas.Handle, 0, 0, temp.Width, temp.Height,
+          aCopy.Canvas.Handle, 0, 0, aCopy.Width, aCopy.Height, SRCCOPY);
+        dest.Assign(temp);
+      finally
+        temp.Free;
+      end;
+    finally
+      aCopy.Free;
+    end;
+  except
+    on E: Exception do
+      MessageBox(0, PChar(E.Message), nil, MB_OK or MB_ICONERROR);
+  end;
+end;
+```
+
 </br>
 
 # File structure:
