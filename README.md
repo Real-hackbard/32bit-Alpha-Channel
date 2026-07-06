@@ -16,8 +16,11 @@ The BMP file format is capable of storing [two-dimensional](https://en.wikipedia
 
 A color spectrum image with an alpha channel that falls off to zero at its base, where it is blended with the background color..
 
-<img src="https://github.com/user-attachments/assets/e9f0fbde-b321-452a-9448-859834d5cce3" />
+</br>
 
+<img src="https://github.com/user-attachments/assets/689310a9-d4c9-4b79-b6b5-897bda52e982" />
+
+</br>
 </br>
 
 In computer graphics, alpha compositing or alpha blending is the process of combining one image with a background to create the appearance of partial or full [transparency](https://en.wikipedia.org/wiki/Transparency_(graphic)). It is often useful to render [picture elements](https://en.wikipedia.org/wiki/Pixel) (pixels) in separate passes or layers and then combine the resulting 2D images into a single, final image called the composite. Compositing is used extensively in film when combining computer-rendered image elements with live footage. Alpha blending is also used in 2D computer graphics to put [rasterized](https://en.wikipedia.org/wiki/Rasterisation) foreground elements over a background.
