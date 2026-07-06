@@ -48,12 +48,81 @@ Any number of images can be generated over the background using masks. The quant
 
 Once the masks have been painted, the background is not painted over; instead, the masks can be removed again at the touch of a button.
 
+### Example: a negative image with five generated spheres.
+
 </br>
 
 <img src="https://github.com/user-attachments/assets/204909a4-ef2a-495c-a408-f0cc5e47cca1" />
 
 </br>
 
+### Code Sample
+```pascal
+{ Here, a specific number of dynamic images are randomly generated as
+  masks over the background. }
+procedure TForm1.Button4Click(Sender: TObject);
+var
+  DynamicImage : TImage;
+  path : TArray<string>;
+  Index : Integer;
+  i : integer;
+begin
+    // List of image files to be selected at random
+    path := TArray<string>.Create(
+      ExtractFilePath(Application.ExeName) + 'Mask\BubleBlue.bmp',
+      ExtractFilePath(Application.ExeName) + 'Mask\BublePink.bmp'
+      // Integrate as many images as you want.
+    );
+
+  // Number of masks to be generated
+  for i := 1 to SpinEdit1.Value do
+  begin
+    // Initialize the random number generator once.
+    Randomize;
+    // Determine a random index between 0 and the number of paths minus 1.
+    Index := Random(Length(path));
+    // Creating the TImage component at runtime
+    DynamicImage := TImage.Create(Self);
+    try
+      // Assign the visual element to a container (e.g., the form or a panel).
+      // draw first the graphic on form not on background image
+      DynamicImage.Parent := Form1.Parent;
+      DynamicImage.Left := 0;
+      DynamicImage.Top := 0;
+      //DynamicImage.Width := 50;
+      //DynamicImage.Height := 50;
+
+      { VCL method primarily used to dynamically scale forms and UI controls
+        for different monitor resolutions, known as Pixels Per Inch (PPI). }
+      DynamicImage.ScaleForPPI(0);
+      // format picture
+      DynamicImage.Stretch := True;
+      DynamicImage.Proportional := True;
+      DynamicImage.Transparent := true;
+
+      // Load the randomly selected image
+      DynamicImage.Picture.LoadFromFile(path[Index]);
+      // check the background image is bitmap or out.
+      if ExtractFileExt(OpenPictureDialog1.FileName) <> '.bmp' then
+      begin
+        Beep;
+        MessageDlg('The background image must be in bitmap format for this function.',
+                      mtWarning, [mbOK], 0);
+        DynamicImage.Free;  // remove pixel
+        Exit;               // go out when not
+      end;
+      // Paint the mask onto the background at random.
+      Image1.Canvas.Draw(Random(Image1.Width), Random(Image1.Height),
+                          DynamicImage.Picture.Graphic);
+      // remove pixel from memory
+      DynamicImage.Picture.Graphic := nil;
+    except
+      // Ensure that the object is released in the event of errors (e.g., file missing).
+      DynamicImage.Free;
+    end;
+  end;
+end;
+```
 
 
 ### File structure:
