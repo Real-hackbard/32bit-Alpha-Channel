@@ -135,6 +135,11 @@ end;
 
 </br>
 
+# Image scaling
+When scaling a image, the graphic primitives that make up the image can be rendered using geometric transformations at any resolution with no loss of [image quality](https://en.wikipedia.org/wiki/Image_quality). When scaling a raster graphics image, a new image with a higher or lower number of pixels must be generated.
+
+</br>
+
 # File structure:
 The bitmap image file consists of fixed-size structures (headers) as well as variable-sized structures appearing in a predetermined sequence. Many different versions of some of these structures can appear in the file, due to the long evolution of this file format.
 
