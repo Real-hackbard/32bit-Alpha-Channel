@@ -16,7 +16,7 @@ The BMP file format is capable of storing [two-dimensional](https://en.wikipedia
 
 A color spectrum image with an alpha channel that falls off to zero at its base, where it is blended with the background color..
 
-<img width="250" height="125" alt="alpha" src="https://github.com/user-attachments/assets/7fb47937-a30c-44e1-a89b-ee1872ea09d4" />
+<img src="https://github.com/user-attachments/assets/e9f0fbde-b321-452a-9448-859834d5cce3" />
 
 </br>
 
