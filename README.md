@@ -38,6 +38,7 @@ TBitmap32 : https://documentation.help/Graphics32/_Body4.htm
 * Generate Multi Mask Pictures
 * Scale Mask Picture Prozentual
 * Smooth Scaling
+* Disable Mask Picture
 
 </br>
 
